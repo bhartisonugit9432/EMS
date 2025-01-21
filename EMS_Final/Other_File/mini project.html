@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mini project</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+<div class="bg-warning">
+  <nav class="navbar navbar-expand-lg bg-lite container">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">EMS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              DATA
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="http://hitmlucknow.ac.in/">ALL DATA</a></li>
+              <li><a class="dropdown-item" href="MOCK_DATA - Copy.xlsx">FILTER DATA</a></li>
+              <li><a class="dropdown-item" href="hi,malayan poster.html">MODIFY DATA</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link">REPORTS</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit" style="background-color:white;">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  
+</div>
+  <div class="container">
+
+    <!-- End Example Code -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+    <br>
+    <div class="container">
+      <div class="row" style="border-radius:10px;">
+        <div class="col bg-success"style="border-radius:10px ;">
+          <h1 class="text-center text-white" >Category wise</h1>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <br>
+  <!-- Equal width cols, same on all screen sizes -->
+
+  <!-- div for course -->
+  <div id="course">
+
+
+
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>S NO.</th>
+                <th>Categary</th>
+                <th>Total Emp</th>
+                <th>Expense</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Academic</td>
+                <td>32</td>
+                <td>507</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Non Academic</td>
+                <td>12</td>
+                <td>197</td>
+              </tr>
+            </tbody>
+
+          </table>
+
+
+        </div>
+        <div class="col-6">
+          <canvas id="myChart" style="width:100%;"></canvas>
+
+          <script>
+
+            var xValues = ["Academic", "Non Academic"];
+
+            new Chart("myChart", {
+              type: "line",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  label: 'Total Emp.',
+                  data: [32, 12],
+                  borderColor: "blue",
+                  fill: false
+
+                }, {
+                  data: [507, 197],
+                  label: 'Expense',
+                  borderColor: "red",
+                  fill: true
+                }]
+              },
+              options: {
+                legend: { display: false }
+              }
+            });
+          </script>
+
+
+        </div>
+
+      </div>
+      <br>
+      <div class="row">
+        <div class="col bg-success"style="border-radius:10px ;">
+          <h1 class="text-center text-white">Course wise</h1>
+        </div>
+      </div>
+
+    </div>
+
+
+    <br>
+    <!-- Equal width cols, same on all screen sizes -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <canvas id="myChart1" style="width:100%;"></canvas>
+
+          <script>
+            var xValues = ["B.tech" , "BBA" , "ITI"];
+
+            new Chart("myChart1", {
+              type: "line",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  label:'Total emp',
+                  data: [27,05,04],
+                  borderColor: "red",
+                  fill: false
+
+                }, {
+                 
+                  label:'Expense',
+                  data: [44,15,04],
+                  borderColor: "blue",
+                  fill: true
+                }]
+              },
+              options: {
+                legend: { display: false }
+              }
+            });
+          </script>
+         
+
+
+        </div>
+        <div class="col-6">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>S NO.</th>
+                <th>Course</th>
+                <th>Total Emp</th>
+                <th>Expense</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>B.Tech</td>
+                <td>27</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>BBA</td>
+                <td>05</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>ITI</td>
+                <td>04</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>Polytechnic</td>
+                <td>05</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+
+          </table>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!---Branch wise div-->
+
+  <div id="branch">
+
+
+
+    <div class="container">
+
+      <br>
+      <div class="row">
+        <div class="col bg-success"style="border-radius:10px ;">
+          <h1 class="text-center text-white">Branch wise</h1>
+        </div>
+      </div>
+
+    </div>
+
+
+    <br>
+    <!-- Equal width cols, same on all screen sizes -->
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>S NO.</th>
+                <th>branch</th>
+                <th> Emp</th>
+                <th>Expense</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>CS</td>
+                <td>04</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>EC</td>
+                <td>02</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>EN</td>
+                <td>02</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">4</th>
+                <td>CE</td>
+                <td>04</td>
+                <td>-</td>
+              </tr>
+              <tr>
+                <th scope="row">5</th>
+                <td>ME</td>
+                <td>03</td>
+                <td>-</td>
+              </tr>
+            </tbody>
+
+          </table>
+
+
+        </div>
+        <div class="col-6">
+          <canvas id="myChart2" style="width:100%;"></canvas>
+
+          <script>
+            var xValues = ["CS,EC,EN,CE"];
+
+            new Chart("myChart2", {
+              type: "line",
+              data: {
+                labels: xValues,
+                datasets: [{
+                  label:'Emp',
+                  data: [04,02,02,04],
+                  borderColor: "red",
+                  fill: false
+
+                }, {
+                  data: [],
+                  label:'Expense',
+                  borderColor: "blue",
+                  fill: false
+                }]
+              },
+              options: {
+                legend: { display: false }
+              }
+            });
+          </script>
+
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+
+</body>
+
+
+
+
+
+</html>

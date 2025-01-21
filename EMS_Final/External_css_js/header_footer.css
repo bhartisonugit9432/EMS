@@ -1,0 +1,20 @@
+.navbar-nav>li {
+    margin: 0 12px;
+    font-size: 19px;
+}
+
+.navbar-nav>li:hover {
+    background-color: tomato;
+    animation: linear 1s infinite alternate;
+    border-radius: 12px;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: cornflowerblue;
+    color: white;
+    height: 100px;
+}
